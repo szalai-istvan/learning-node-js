@@ -3,8 +3,11 @@ const express = require('express');
 const productRoutes = require('./routes_/product');
 const userRoutes = require('./routes_/users');
 
-
 const app = express();
+
+app.set('view engine', 'pug');
+app.set('views', 'views_');
+
 app.use(productRoutes);
 app.use(userRoutes);
 
