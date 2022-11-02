@@ -6,8 +6,8 @@ const handlebars = require('express-handlebars');
 
 const app = express();
 
-app.set('view engine', 'pug');
 app.set('views', 'views_');
+app.set('view engine', 'ejs');
 
 app.use(productRoutes);
 app.use(userRoutes);
