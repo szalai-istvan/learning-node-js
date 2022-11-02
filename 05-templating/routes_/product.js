@@ -10,7 +10,7 @@ router.use('/add-product', (req, res, next) => {
 });
 
 router.post('/product', (req, res, next) => {
-    fs.appendFileSync('log.txt', req.body);
+    fs.appendFileSync('log.txt', req.body.title + '\n');
     res.redirect('/');
 });
 
