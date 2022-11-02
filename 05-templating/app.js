@@ -2,6 +2,7 @@ const http = require('http');
 const express = require('express');
 const productRoutes = require('./routes_/product');
 const userRoutes = require('./routes_/users');
+const handlebars = require('express-handlebars');
 
 const app = express();
 
