@@ -1,11 +1,12 @@
 const path = require('path');
-const fs = require('fs');
+const Product = require('../models/product');
 
 exports.getAddProduct = (req, res, next) => {
     res.sendFile(path.join(__dirname, '..', 'views_', 'add-product.html'));
 };
 
 exports.postProduct = (req, res, next) => {
-    fs.appendFileSync('log.txt', req.body.title + '\n');
+    const product = new Product(req.body.title);
+    product.save();
     res.redirect('/');
 };
